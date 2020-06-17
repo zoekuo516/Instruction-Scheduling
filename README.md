@@ -1,4 +1,4 @@
-# Computer-Architecture/Project2
+# Instruction Scheduling
 ## 目標
 * 實作Tomasulo algorithm
 * instrction只有加減乘除以及對應的其I-type instruction
