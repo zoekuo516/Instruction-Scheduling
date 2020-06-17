@@ -1,11 +1,9 @@
 # Computer-Architecture/Project2
-## 簡介
+## 目標
 * 實作Tomasulo algorithm
-* SETUP
-  * Environment:WIN10
-  * IDE:Pycharm 4.0 Python 3.7
-  * Language:Python
-### Parameter:
+* instrction只有加減乘除以及對應的其I-type instruction
+* instruction執行的cycle數固定，register種類固定(F1~F5)，RS固定 可以參考上課內容
+### 參數:
 Initial state:
 ```py    
 Register={'F1':1,'F2':1,'F3':2,'F4':None,'F5':None}
@@ -16,6 +14,8 @@ adder=3
 multiplier=2
 ```
 ### Input: 
+    把我們的input放到input2.txt檔裡
+    範例:
     ADD F3,F2,F3
     DIV F4,F2,F3
     MUL F5,F3,F2
@@ -67,7 +67,7 @@ multiplier=2
     (MUL)Buffer=Empty
 
 ### Step:
-#### 1.Set parameter:
+#### 1.設定參數:
 ##### Register value:F1,F2,F3,F4,F5 可給初值
 ##### Cycle time:
 - addcycle(subcycle)
@@ -76,13 +76,13 @@ multiplier=2
 ##### Adder and Multiper:
 - adder 加法器個數
 - multiper 乘法器個數
-#### 2.Read input file:
+#### 2.讀取 input:
     ADD F3,F2,F3
     DIV F4,F2,F3
     MUL F5,F3,F2
     ADD F3,F5,F1
     ADD F2,F4,F2
-#### 3.Create Table:
+#### 3.建立Table:
 ##### Issue table: 根據input file create issue list
     Instruction1:[OP,Reg1,Reg2,Reg3]
     Instruction2:[OP,Reg1,Reg2,Reg3]
